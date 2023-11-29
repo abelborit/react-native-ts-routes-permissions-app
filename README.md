@@ -1,8 +1,33 @@
+# React Native & TypeScript - Routes & Permissions App
+
+---
+
+# Temas puntuales de la sección
+
+### ¿Qué veremos en esta sección?
+
+En esta sección nos enfocaremos en trabajar todo lo relacionado a permisos como el GPS, cámara, photos o lo que se necesite, todo se hace la misma manera para cualquier permiso del dispositivo y para eso se creará un contexto que nos permita trabajar fácilmente cualquier permiso que se necesite en aplicaciones futuras.
+
+En este proyecto puntualmente nos enfocaremos en todo el manejo del permiso de GPS para poder determinar su ubicación precisa y así poder generar un mapa en sus coordenadas.
+
+    - ejemplo
+    - ejemplo
+    - ejemplo
+
+### \* RECURSOS A USAR:
+
+- react-native-permissions: https://www.npmjs.com/package/react-native-permissions
+  - `npm i react-native-permissions`
+- ejemplo
+- ejemplo
+
+---
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
