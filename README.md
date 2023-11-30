@@ -10,8 +10,9 @@ En esta sección nos enfocaremos en trabajar todo lo relacionado a permisos como
 
 En este proyecto puntualmente nos enfocaremos en todo el manejo del permiso de GPS para poder determinar su ubicación precisa y así poder generar un mapa en sus coordenadas.
 
-    - ejemplo
-    - ejemplo
+    - Stack de navegación
+    - Permisos para usar algún recursos del dispositivo (se está usando un paquete de terceros para hacerlo más estándar para IOS/Android a la vez y también crear algo que nos ayude a controlar todos los permisos de forma uniforme en el futuro. También se puede usar PermissionsAndroid que provee React Native en su core. )
+    - Context API
     - ejemplo
 
 ### \* RECURSOS A USAR:
