@@ -106,6 +106,9 @@ export const PermissionsProvider = ({children}: PermissionsProviderProps) => {
 
   /* saber el estado de la aplicación, si está activa, si está en el background (o sea como en segundo plano), etc... */
   useEffect(() => {
+    /* se agrega también esta función al useEffect() porque puede ser que se de un loading infinito al entrar a la aplicación ya que en el listenerAppStatusChange realiza el checkLocationPermission según el estado de la aplicación (activo, en segundo plano, etc) pero de esta forma lo ejecuta también al estar en la aplicación o cambiar alguna configuración del código ya que si se cambia el estado entonces se vuelve a disparar este useEffect(). Esto se puede ver mejor si se recarga la consola de Metro y se comenta esta línea ya que se verá que aparece el loading infinito */
+    checkLocationPermission();
+
     const listenerAppStatusChange = AppState.addEventListener(
       'change',
       appStatus => {
