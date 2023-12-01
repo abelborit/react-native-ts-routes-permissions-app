@@ -18,7 +18,12 @@ En este proyecto puntualmente nos enfocaremos en todo el manejo del permiso de G
 ### \* PASOS A REALIZAR:
 
 1. Al realizar la generación de la API Key en la consola de Google fue para tener también la facilidad de que si queremos trabajar Google Maps en iOS. La configuración de la aplicación con esas API Key entonces ya funciona en Android con Google Maps y en iOS con Apple Maps y no hay que hacer más configuración porque Apple Maps es la implementación de mapas de Apple y ese paquete de mapas nativo ya tiene cierta funcionalidad como polylines, marcadores y generealidades con lo que usualmente se va a trabajar pero hay ciertas funcionalidades que no se tienen y por eso se hará también la configuración de Google Maps para iOS.
-2. ejemplo
+2. Puede ser que salga un warning en la aplicación referido a `RequireCycle Warning` y si sale se hará lo siguiente:
+
+   - respuesta de itsam y diwakarpawar: https://github.com/react-native-maps/react-native-maps/issues/3352
+     - https://github.com/react-native-maps/react-native-maps/issues/3352#issuecomment-630168111
+     - https://github.com/react-native-maps/react-native-maps/issues/3352#issuecomment-680933811 (al ejecutar el script dará un warning en la aplicación que es normal, hay que levnatar de nuevo la aplicación de Android y también iOS)
+
 3. ejemplo
 
 ### \* RECURSOS A USAR:
