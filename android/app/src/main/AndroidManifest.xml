@@ -24,5 +24,10 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+
+      <!-- android:name="com.google.android.geo.API_KEY" eso se deja así como está y en android:value="Your Google maps API Key Here" ahí es donde se coloca el API Key que se generó en Google maps -->
+      <!-- <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="Your Google maps API Key Here" /> -->
     </application>
 </manifest>

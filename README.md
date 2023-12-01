@@ -8,18 +8,25 @@
 
 En esta sección nos enfocaremos en trabajar todo lo relacionado a permisos como el GPS, cámara, photos o lo que se necesite, todo se hace la misma manera para cualquier permiso del dispositivo y para eso se creará un contexto que nos permita trabajar fácilmente cualquier permiso que se necesite en aplicaciones futuras.
 
-En este proyecto puntualmente nos enfocaremos en todo el manejo del permiso de GPS para poder determinar su ubicación precisa y así poder generar un mapa en sus coordenadas.
+En este proyecto puntualmente nos enfocaremos en todo el manejo del permiso de GPS para poder determinar su ubicación precisa y así poder generar un mapa en sus coordenadas. Aprenderemos a utilizar el GPS del dispositivo, darle seguimiento, trazar rutas, colocar marcadores y sobre todo, estar pendiente de los permisos del GPS. Utilizaremos Apple Maps y Google Maps, junto sus configuraciones respectivas e instalaciones.
 
     - Stack de navegación
     - Permisos para usar algún recursos del dispositivo (se está usando un paquete de terceros para hacerlo más estándar para IOS/Android a la vez y también crear algo que nos ayude a controlar todos los permisos de forma uniforme en el futuro. También se puede usar PermissionsAndroid que provee React Native en su core. )
     - Context API
-    - ejemplo
+    - Implementar mapas (zoom in y zoom out al mapa, rutas, seguimiento y polylines)
+
+### \* PASOS A REALIZAR:
+
+1. Al realizar la generación de la API Key en la consola de Google fue para tener también la facilidad de que si queremos trabajar Google Maps en iOS. La configuración de la aplicación con esas API Key entonces ya funciona en Android con Google Maps y en iOS con Apple Maps y no hay que hacer más configuración porque Apple Maps es la implementación de mapas de Apple y ese paquete de mapas nativo ya tiene cierta funcionalidad como polylines, marcadores y generealidades con lo que usualmente se va a trabajar pero hay ciertas funcionalidades que no se tienen y por eso se hará también la configuración de Google Maps para iOS.
+2. ejemplo
+3. ejemplo
 
 ### \* RECURSOS A USAR:
 
 - react-native-permissions: https://www.npmjs.com/package/react-native-permissions
   - `npm i react-native-permissions`
-- ejemplo
+- react-native-maps: https://github.com/react-native-maps/react-native-maps / https://github.com/react-native-maps/react-native-maps/blob/master/docs/installation.md
+  - `npm install react-native-maps`
 - ejemplo
 
 ---
