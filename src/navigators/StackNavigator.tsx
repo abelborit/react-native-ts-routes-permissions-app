@@ -17,7 +17,7 @@ export const StackNavigator = () => {
   const {permissionsNeeded} = useContext(PermissionsContext);
 
   if (permissionsNeeded.locationStatus === 'unavailable') {
-    return <LoaderComponent />;
+    return <LoaderComponent text="Loading Permissions..." colorString="#444" />;
   }
 
   return (

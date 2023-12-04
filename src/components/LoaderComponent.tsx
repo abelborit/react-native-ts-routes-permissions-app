@@ -1,12 +1,17 @@
 import React from 'react';
 import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
 
-export const LoaderComponent = () => {
+interface LoaderComponentProps {
+  text: string;
+  colorString: string;
+}
+
+export const LoaderComponent = ({text, colorString}: LoaderComponentProps) => {
   return (
     <View style={styles.indicatorContainer}>
-      <ActivityIndicator size={60} color={'rgba(0, 0, 0, 0.5)'} />
+      <ActivityIndicator size={60} color={colorString} />
 
-      <Text>Loading...</Text>
+      <Text style={{color: colorString}}>{text}</Text>
     </View>
   );
 };

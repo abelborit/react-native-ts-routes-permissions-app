@@ -1,5 +1,5 @@
 /* crear el provider que es un componente que vamos a utilizar para obtener la información de nuestro context y es quien envolverá al componente más alto para repartir la información a sus hijos. Aquí se va a definir el estado a través de una interface para ir viendo cómo quiero que se vea a futuro la aplicación */
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, /* useMemo, */ useState} from 'react';
 import {PermissionsContext} from './PermissionsContext';
 import {
   PERMISSIONS,
@@ -123,6 +123,15 @@ export const PermissionsProvider = ({children}: PermissionsProviderProps) => {
       listenerAppStatusChange.remove();
     };
   }, [checkLocationPermission]);
+
+  // const valueProvider = useMemo(
+  //   () => ({
+  //     permissionsNeeded,
+  //     askLocationPermission,
+  //     checkLocationPermission,
+  //   }),
+  //   [askLocationPermission, checkLocationPermission, permissionsNeeded],
+  // );
 
   return (
     <PermissionsContext.Provider

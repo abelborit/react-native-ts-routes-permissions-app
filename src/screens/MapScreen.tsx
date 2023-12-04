@@ -1,6 +1,47 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-// import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
+import {MapComponent} from '../components/MapComponent';
+// import MapView, {PROVIDER_GOOGLE} from 'react-native-maps'
+
+export interface MapMarkerProps {
+  coordinate: {
+    latitude: number;
+    longitude: number;
+  };
+  title: string;
+  description: string;
+  image: string;
+}
+
+const mapLocationsData: MapMarkerProps[] = [
+  {
+    coordinate: {
+      latitude: 37.78825,
+      longitude: -122.4324,
+    },
+    title: 'Mapa1',
+    description: 'Descripcion de Mapa 1',
+    image: '../assets/custom-marker.png',
+  },
+  {
+    coordinate: {
+      latitude: 50.25825,
+      longitude: -122.4354,
+    },
+    title: 'Mapa2',
+    description: 'Descripcion de Mapa 2',
+    image: '../assets/custom-marker.png',
+  },
+  {
+    coordinate: {
+      latitude: 10.62825,
+      longitude: -122.4365,
+    },
+    title: 'Mapa3',
+    description: 'Descripcion de Mapa 2',
+    image: '../assets/custom-marker.png',
+  },
+];
 
 export const MapScreen = () => {
   return (
@@ -17,6 +58,8 @@ export const MapScreen = () => {
           longitudeDelta: 0.0421,
         }}
       /> */}
+
+      <MapComponent markers={mapLocationsData} />
     </View>
   );
 };

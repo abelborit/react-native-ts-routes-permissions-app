@@ -18,13 +18,15 @@ En este proyecto puntualmente nos enfocaremos en todo el manejo del permiso de G
 ### \* PASOS A REALIZAR:
 
 1. Al realizar la generación de la API Key en la consola de Google fue para tener también la facilidad de que si queremos trabajar Google Maps en iOS. La configuración de la aplicación con esas API Key entonces ya funciona en Android con Google Maps y en iOS con Apple Maps y no hay que hacer más configuración porque Apple Maps es la implementación de mapas de Apple y ese paquete de mapas nativo ya tiene cierta funcionalidad como polylines, marcadores y generealidades con lo que usualmente se va a trabajar pero hay ciertas funcionalidades que no se tienen y por eso se hará también la configuración de Google Maps para iOS.
+
 2. Puede ser que salga un warning en la aplicación referido a `RequireCycle Warning` y si sale se hará lo siguiente:
 
    - respuesta de itsam y diwakarpawar: https://github.com/react-native-maps/react-native-maps/issues/3352
      - https://github.com/react-native-maps/react-native-maps/issues/3352#issuecomment-630168111
      - https://github.com/react-native-maps/react-native-maps/issues/3352#issuecomment-680933811 (al ejecutar el script dará un warning en la aplicación que es normal, hay que levnatar de nuevo la aplicación de Android y también iOS)
 
-3. ejemplo
+3. Para mostrar la ubicación del usuario se coloca el atributo showsUserLocation={true} o solo showsUserLocation en el <MapView></MapView> pero aún no aperecerá el usuario ya que hay que hacer algunas cosas más: si se utiliza el simulador de iOS entonces en la barra de tareas del simulador ir a la pestaña Features -> Location -> Freeway Drive. Luego para Android ir al simulador y tocar los `...` de abajo y se abrirá un panel luego ir a Location y crear Single Points (son puntos de ubicación) o sino Routes (rutas de punto A a punto B y luego poner Play Route) con eso veremos que las rutas van cambiando pero el mapa no hace su seguimiendo y esa es la funcionalidad que tenemos que implementar
+4. También se hará uso de react-native-geolocation para saber la coordenada actual del usuario y en su documentación vemos "Configuration and Permissions" y eso ya lo hicimos al principio al tratar los permisos del dispositivo entonces no sería necesario hacerlo de nuevo pero igual podemos dar un vistazo sobre qué es lo que nos menciona
 
 ### \* RECURSOS A USAR:
 
@@ -32,7 +34,9 @@ En este proyecto puntualmente nos enfocaremos en todo el manejo del permiso de G
   - `npm i react-native-permissions`
 - react-native-maps: https://github.com/react-native-maps/react-native-maps / https://github.com/react-native-maps/react-native-maps/blob/master/docs/installation.md
   - `npm install react-native-maps`
-- ejemplo
+- react-native-geolocation: https://github.com/michalchudziak/react-native-geolocation
+  - `npm install @react-native-community/geolocation --save`
+- Puede ser que hayan algunos problemas con react-native-geolocation y aparezca un warning con "new NativeEventEmitter() was called with a non-null argument without the required removeListeners method" entonces se puede usar react-native-geolocation-service y parece que solo sería cambiar la ruta de importación: https://github.com/Agontuk/react-native-geolocation-service
 
 ---
 
